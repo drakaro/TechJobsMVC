@@ -25,22 +25,22 @@
     <input type="submit" value="Search" />
 </form>
 
-<hr />
+<hr/>
 
-@if (ViewBag.jobs != null)
+@if(ViewBag.jobs != null)
 {
 
-    <h3>@ViewBag.jobs.Count Result(s)</h3>
+    <h3> @ViewBag.jobs.Count Result(s) </h3>
 
-    // TODO #2 - Loop over jobs dictionary and display all job fields
-    @foreach (Dictionary<string, string> job in ViewBag.jobs)
+       // TODO #2 - Loop over jobs dictionary and display all job fields
+       @foreach(Dictionary<string, string> job in ViewBag.jobs)
     {
         <table class="job-listing">
-            @foreach (KeyValuePair<string, string> jobinfo in job)
-            {
+            @foreach(KeyValuePair<string, string> jobinfo in job)
+        {
                 <tr>
-                    <th>@jobinfo.Key</th>
-                    <td>@jobinfo.Value</td>
+                    <th> @jobinfo.Key </th>
+                    <td> @jobinfo.Value </td>
                 </tr>
             }
         </table>

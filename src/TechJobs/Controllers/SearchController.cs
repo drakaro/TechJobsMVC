@@ -13,8 +13,6 @@ namespace TechJobs.Controllers
             return View();
         }
 
-        // TODO #1 - Create a Results action method to process 
-        // search request and display results
         public IActionResult Results(string searchType, string searchTerm)
         {
             ViewBag.columns = ListController.columnChoices;
@@ -44,5 +42,31 @@ namespace TechJobs.Controllers
                 return View("Index");
             }
         }
+
+
+
+        // TODO #1 - Create a Results action method to process 
+        // search request and display results
+        //[HttpGet]
+        //[Route("/Search/Results")]
+        //public IActionResult Results(string searchType, string searchTerm)
+        //{
+        //ViewBag.columns = ListController.columnChoices;
+        //List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
+
+        //if (searchTerm == null)
+        //{
+        //ViewBag.jobs = JobData.FindAll();
+        //}
+        //else if (searchTerm == "all")
+        //{
+        //ViewBag.jobs = JobData.FindByValue(searchTerm);
+        //}
+        //else
+        //{
+        //ViewBag.jobs = JobData.FindByColumnAndValue(searchType, searchTerm);
+        //}
+        //return View("Views/Search/Index.cshtml");
+        //}
     }
 }
